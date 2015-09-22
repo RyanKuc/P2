@@ -3,7 +3,7 @@ $numwords = $_POST['numwords'] ?: "4";
 $numspec = $_POST['numspec'] ?: "0";
 $numnum = $_POST['numnum'] ?: "0";
 $hyphensep = $_POST['hyphen'];
-$allcaps = $_POST['all_caps'];
+$allcaps = $_POST['allcaps'];
 /* special chars */
 $specials = array("!", "#", "$", "%", "^", "&", "*", "?");
 shuffle($specials);

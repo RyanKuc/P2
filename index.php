@@ -19,35 +19,53 @@
     <input type='number' name='numspec' min='0' max='5' value="<?=$numspec?>" class="form-control" id="numspec"><br>
     <label for="numnum">Enter Number of Numberic Values 0-99: </label>
     <input type='number' name='numnum' min='0' max='5' value="<?=$numnum?>" class="form-control" id="numnum"><br>
-    <input type='checkbox' class="checkbox" value="<?=$allcaps?>" name="allcaps">ALL CAPS</br>
+    <input type='checkbox' class="checkbox" value=yes name="allcaps"  <?php if(isset($_POST['allcaps']) &&
+       $_POST['allcaps'] == 'yes'){echo "checked";} else {echo "";} ?>>ALL CAPS</br>
     <input type='checkbox' class="checkbox" value="yes" name="hyphen" <?php if(isset($_POST['hyphen']) &&
        $_POST['hyphen'] == 'yes'){echo "checked";} else {echo "";} ?>>hyphen-seperated</br>
     <input type='submit' value='Set New Password' class="btn-block form-control">
   </form>
   </div>
   <div class="col-lg-4">
-<?php
-if(isset($_POST['hyphen']) &&
-   $_POST['hyphen'] == 'yes')
-{
-    for($i = 0; $i < $total_obj; $i++){
-      if($i == $total_obj-1){
-      echo $passwordcomps[$i];
+    <?php
+    if(isset($allcaps) &&
+       $allcaps == 'yes' && isset($hyphensep) &&
+          $hyphensep == 'yes')
+    {
+        for($i = 0; $i < $total_obj; $i++){
+          if($i == $total_obj-1){
+          echo strtoupper($passwordcomps[$i]);
+        }
+        else {echo strtoupper($passwordcomps[$i])."-";}
+        };
     }
-    else {echo $passwordcomps[$i]."-";}
-    };
 
-}
-else
-{
-  foreach($passwordcomps as $value) {
-    echo $value." ";};
-}
-?>
-<?php
-foreach($passwordcomps as $value) {
-  echo strtoupper($value);};
-?>
+    elseif(isset($allcaps) &&
+       $allcaps == 'yes')
+    {
+        for($i = 0; $i < $total_obj; $i++){
+          if($i == $total_obj-1){
+          echo strtoupper($passwordcomps[$i]);
+        }
+        else {echo strtoupper($passwordcomps[$i])." ";}
+        };
+    }
+    elseif(isset($hyphensep) &&
+       $hyphensep == 'yes')
+    {
+        for($i = 0; $i < $total_obj; $i++){
+          if($i == $total_obj-1){
+          echo $passwordcomps[$i];
+        }
+        else {echo $passwordcomps[$i]."-";}
+        };
+    }
+    else
+    {
+      foreach($passwordcomps as $value) {
+        echo $value." ";};
+    }
+    ?>
   </div>
 
 </div>
