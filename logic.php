@@ -18,6 +18,11 @@ $words = array("angola", 	"avenue", 	"almada", 	"agency", 	"aornum", 	"anglic", 
 shuffle($words);
 $wordspw = array_slice($words, 0, $numwords);
 /* combine options into one array */
+$total_obj = count($numpw)+count($specialpw)+count($wordspw);
+
 $passwordcomps = array_merge($numpw, $specialpw, $wordspw);
 shuffle($passwordcomps);
-$total_obj = count($numpw)+count($specialpw)+count($wordspw);
+/* account for checkboxes*/
+$hyphen_separated = implode("-", $passwordcomps);
+$passreg = implode(" ", $passwordcomps);
+?>

@@ -28,42 +28,21 @@
   </div>
   <div class="col-lg-4">
     <?php
-    if(isset($allcaps) &&
-       $allcaps == 'yes' && isset($hyphensep) &&
-          $hyphensep == 'yes')
+    if(isset($allcaps) && $allcaps == 'yes' && isset($hyphensep) && $hyphensep == 'yes')
     {
-        for($i = 0; $i < $total_obj; $i++){
-          if($i == $total_obj-1){
-          echo strtoupper($passwordcomps[$i]);
-        }
-        else {echo strtoupper($passwordcomps[$i])."-";}
-        };
+    echo strtoupper($hyphen_separated);
     }
-
-    elseif(isset($allcaps) &&
-       $allcaps == 'yes')
+    elseif(isset($allcaps) && $allcaps == 'yes')
     {
-        for($i = 0; $i < $total_obj; $i++){
-          if($i == $total_obj-1){
-          echo strtoupper($passwordcomps[$i]);
-        }
-        else {echo strtoupper($passwordcomps[$i])." ";}
-        };
+      echo strtoupper($passreg);
     }
-    elseif(isset($hyphensep) &&
-       $hyphensep == 'yes')
+    elseif(isset($hyphensep) && $hyphensep == 'yes')
     {
-        for($i = 0; $i < $total_obj; $i++){
-          if($i == $total_obj-1){
-          echo $passwordcomps[$i];
-        }
-        else {echo $passwordcomps[$i]."-";}
-        };
+    echo $hyphen_separated;
     }
     else
     {
-      foreach($passwordcomps as $value) {
-        echo $value." ";};
+    echo $passreg;
     }
     ?>
   </div>
