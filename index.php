@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
   <title>Project2 - Password Genertator</title>
+      <link rel="icon" href="/images/IMG_0376.jpg">
   <link rel="stylesheet" type="text/CSS" href="css/styles.css">
     <link rel="stylesheet" type="text/CSS" href="css/bootstrap.min.css">
   <?php require 'logic.php'; ?>
