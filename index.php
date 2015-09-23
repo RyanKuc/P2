@@ -57,11 +57,12 @@
     </div>
   </div>
 </nav>
-<!--++++++++++++++++++++++++++++++++++++++++++++++--->
+<!-- ===================================================== --->
 <div class="container">
   <div class="jumbotron">
     <h1><span>Secure</span> Password Generator</h1>
-    <p>Enter your preferences below to customer the perfect password.</p>
+    <p>Uses a combination of common words, numbers and special characters to create passwords that are easy for humans to remember but hard for computers to guess.</p>
+    <p>Enter your preferences below to customize the perfect password.</p>
       <h3><span>
         <?php
       if(isset($allcaps) && $allcaps == 'yes' && isset($hyphensep) && $hyphensep == 'yes')
