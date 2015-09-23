@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/CSS" href="css/bootstrap.min.css">
   <?php require 'logic.php'; ?>
 </head>
+<!-- ================================================== -->
 <body>
   <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -57,7 +58,7 @@
     </div>
   </div>
 </nav>
-<!-- ===================================================== --->
+<!-- ===================================================== -->
 <div class="container">
   <div class="jumbotron">
     <h1><span>Secure</span> Password Generator</h1>
@@ -83,15 +84,15 @@
       }
       ?>
     </span>
-      <h3>
+  </h3>
     </div>
 
 </div>
-<!--++++++++++++++++++++++++++++++++++++++++++++++--->
+<!-- ================================================== -->
   <div class="container">
     <div class="jumbotron" id="main">
 
-  <form role="form" method='POST' action='index.php' class="form-group"></br>
+  <form method='POST' action='index.php' class="form-group"></br>
     <label for="numwords" class="form-labels">Enter Number of Words: </label>
     <input type='number' name='numwords' min='1' max='9' value="<?=$numwords?>" class="form-control" id="numwords">
 
