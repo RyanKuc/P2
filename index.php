@@ -92,7 +92,7 @@
   <div class="container">
     <div class="jumbotron" id="main">
 
-  <form method='POST' action='index.php' class="form-group"></br>
+  <form method='POST' action='index.php' class="form-group">
     <label for="numwords" class="form-labels">Enter Number of Words: </label>
     <input type='number' name='numwords' min='1' max='9' value="<?=$numwords?>" class="form-control" id="numwords">
 
