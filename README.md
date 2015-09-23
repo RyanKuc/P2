@@ -4,6 +4,9 @@
 http://p2.ryankucinski.com
 
 ## Demo/Screencast
+Bug - Dont Use Jing Demo http://screencast.com/t/sWGqoJB05 - PLEASE NOTE jing is currently attempting to fix a bug thats effecting Yosemite 10.10.5 users resulting a black screen and multiple cursors with audio. [link](https://feedback.techsmith.com/techsmith/topics/jing-2-6-73868-recording-blank-screen-with-audio-cursor-on-mac-os-x-yosemite-10-10-5-with-updated) per the suggestions in the comments I re-recorded my demo with quicktime and uploaded it to screencast.com
+
+Use This - http://www.screencast.com/t/fNHrzwVIKHu
 
 ## Description / Process
 Link to [Project Requirements](http://dwa15.com/Projects/P2)
