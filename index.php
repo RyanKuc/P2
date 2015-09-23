@@ -8,46 +8,87 @@
   <?php require 'logic.php'; ?>
 </head>
 <body>
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Ryan Kucinski Project 2</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li><a href="#">P1</a></li>
+        <li class="active"><a href="#">P2</a></li>
+        <li><a href="#">P3</a></li>
+        <li><a href="#">P4</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--++++++++++++++++++++++++++++++++++++++++++++++--->
+<div class="container">
+  <div class="jumbotron">
+    <h1><span>Secure</span> Password Generator</h1>
+    <p>Enter your preferences below to customer the perfect password.</p>
+      <h3><span>
+        <?php
+      if(isset($allcaps) && $allcaps == 'yes' && isset($hyphensep) && $hyphensep == 'yes')
+      {
+      echo strtoupper($hyphen_separated);
+      }
+      elseif(isset($allcaps) && $allcaps == 'yes')
+      {
+        echo strtoupper($passreg);
+      }
+      elseif(isset($hyphensep) && $hyphensep == 'yes')
+      {
+      echo $hyphen_separated;
+      }
+      else
+      {
+      echo $passreg;
+      }
+      ?>
+    </span>
+      <h3>
+    </div>
+
+</div>
+<!--++++++++++++++++++++++++++++++++++++++++++++++--->
   <div class="container">
-    <div class="row">
-      <div class="col-lg-4">
-  <form role="form-group" method='POST' action='index.php' class="form-group"></br>
-    Password Generator:</br>
-    <label for="numwords">Enter Number of Words: </label>
-    <input type='number' name='numwords' min='1' max='9' value="<?=$numwords?>" class="form-control" id="numwords"><br>
-    <label for="numspec">Enter Number of Special Characters: </label>
-    <input type='number' name='numspec' min='0' max='5' value="<?=$numspec?>" class="form-control" id="numspec"><br>
-    <label for="numnum">Enter Number of Numberic Values 0-99: </label>
-    <input type='number' name='numnum' min='0' max='5' value="<?=$numnum?>" class="form-control" id="numnum"><br>
-    <input type='checkbox' class="checkbox" value=yes name="allcaps"  <?php if(isset($_POST['allcaps']) &&
-       $_POST['allcaps'] == 'yes'){echo "checked";} else {echo "";} ?>>ALL CAPS</br>
-    <input type='checkbox' class="checkbox" value="yes" name="hyphen" <?php if(isset($_POST['hyphen']) &&
-       $_POST['hyphen'] == 'yes'){echo "checked";} else {echo "";} ?>>hyphen-seperated</br>
-    <input type='submit' value='Set New Password' class="btn-block form-control">
+    <div class="jumbotron" id="main">
+
+  <form role="form" method='POST' action='index.php' class="form-group"></br>
+    <label for="numwords" class="form-labels">Enter Number of Words: </label>
+    <input type='number' name='numwords' min='1' max='9' value="<?=$numwords?>" class="form-control" id="numwords">
+
+
+  <div class="form-group">
+    <label for="numspec" class="form-labels">Enter Number of Special Characters: </label>
+    <input type='number' name='numspec' min='0' max='5' value="<?=$numspec?>" class="form-control" id="numspec">
+</div>
+  <div class="form-group">
+    <label for="numnum" class="form-labels">Enter Number of Numberic Values 0-99: </label>
+    <input type='number' name='numnum' min='0' max='5' value="<?=$numnum?>" class="form-control" id="numnum">
+  </div>
+    <div class="form-group form-control">
+      <div class="checkbox-inline">
+    <input type='checkbox'  value=yes name="allcaps" class="checkbox" <?php if(isset($_POST['allcaps']) &&
+       $_POST['allcaps'] == 'yes'){echo "checked";} else {echo "";} ?>>ALL CAPS
+     </div>
+       <div class="checkbox-inline">
+    <input type='checkbox'  value="yes" name="hyphen" class="checkbox" <?php if(isset($_POST['hyphen']) &&
+       $_POST['hyphen'] == 'yes'){echo "checked";} else {echo "";} ?>>hyphen-seperated
+       </div>
+     </div>
+   <div class="form-group">
+  <button type='submit' class="btn btn-default form-control">Set New Password</button>
+ </div>
   </form>
   </div>
-  <div class="col-lg-4">
-    <?php
-    if(isset($allcaps) && $allcaps == 'yes' && isset($hyphensep) && $hyphensep == 'yes')
-    {
-    echo strtoupper($hyphen_separated);
-    }
-    elseif(isset($allcaps) && $allcaps == 'yes')
-    {
-      echo strtoupper($passreg);
-    }
-    elseif(isset($hyphensep) && $hyphensep == 'yes')
-    {
-    echo $hyphen_separated;
-    }
-    else
-    {
-    echo $passreg;
-    }
-    ?>
-  </div>
-
 </div>
+  <div class="container">
+<footer>
+  <p class="pull-right"><a href="#">Back to top</a></p>
+  <p>&copy; 2015 Ryan Kucinski</p>
+</footer>
 </div>
-
 </body>
