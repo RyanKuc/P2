@@ -19,8 +19,10 @@ The back end is written in PHP. I consulted and referenced http://php.net/manual
 * Default values set to 4 words, 0 numbers and 0 special characters with no additional formatting.
 * Accepts 1-9 words, 0-5 Special characters and 0-5 numbers.
 * Can be accessed via P1 navigation and also links to all live projects and their github repos.
+* The CSS for bootstrap does not validate (as expected) but my CSS file styles.css does.
 
 
-## Outside Code
+## Outside Sources
 * Bootstrap [http://getbootstrap.com/]
 * JQuery 1.11.3 [https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js]
+* Combination of http://www.randomwordgenerator.com/noun.html and https://www.randomlists.com/nouns to generate random word list.
