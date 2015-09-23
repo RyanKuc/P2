@@ -1,3 +1,7 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,10 +19,42 @@
     </div>
     <div>
       <ul class="nav navbar-nav">
-        <li><a href="#">P1</a></li>
-        <li class="active"><a href="#">P2</a></li>
-        <li><a href="#">P3</a></li>
-        <li><a href="#">P4</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle"
+          data-toggle="dropdown" role="button" aria-haspopup="true"
+          aria-expanded="false">P1<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://P1.ryankucinski.com">View Live</a></li>
+            <li><a href="https://github.com/RyanKuc/P1.git">Github</a></li>
+          </ul>
+        </li>
+        <li class="dropdown active">
+          <a href="#" class="dropdown-toggle"
+          data-toggle="dropdown" role="button" aria-haspopup="true"
+          aria-expanded="false">P2<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://P2.ryankucinski.com">View Live</a></li>
+            <li><a href="https://github.com/RyanKuc/P2.git">Github</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle"
+          data-toggle="dropdown" role="button" aria-haspopup="true"
+          aria-expanded="false">P3<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://P3.ryankucinski.com">View Live</a></li>
+            <li><a href="https://github.com/RyanKuc/P3.git">Github</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle"
+          data-toggle="dropdown" role="button" aria-haspopup="true"
+          aria-expanded="false">P4<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://P4.ryankucinski.com">View Live</a></li>
+            <li><a href="https://github.com/RyanKuc/P4.git">Github</a></li>
+          </ul>
+        </li>
       </ul>
     </div>
   </div>
@@ -91,4 +127,9 @@
   <p>&copy; 2015 Ryan Kucinski</p>
 </footer>
 </div>
+<!-- Bootstrap core JavaScript and JQuery -->
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
