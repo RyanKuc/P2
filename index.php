@@ -59,7 +59,7 @@
   </div>
 </nav>
 <!-- ===================================================== -->
-<div class="container">
+<div class="container-fluid">
   <div class="jumbotron">
     <h1><span>Secure</span> Password Generator</h1>
     <p>Uses a combination of common words, numbers and special characters to create passwords that are easy for humans to remember but hard for computers to guess.</p>
@@ -89,7 +89,7 @@
 
 </div>
 <!-- ================================================== -->
-  <div class="container">
+  <div class="container-fluid">
     <div class="jumbotron" id="main">
 
   <form method='POST' action='index.php' class="form-group">
